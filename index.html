@@ -456,19 +456,20 @@
         });
 
         database.ref('teams').on('child_added', function(snapshot) {
-            const data = snapshot.val();
-            const list = document.getElementById('teamsList');
-            const newCard = document.createElement('div');
-            newCard.className = 'legend-card';
-            newCard.innerHTML = `
-                <div class="legend-info">
-                    <span class="legend-name">${data.name}</span>
-                    <span class="team-members">الأعضاء المضافين حديثاً</span>
-                </div>
-                <div class="legend-trophies">🥇</div>
-            `;
-            list.appendChild(newCard);
-        });
+    const data = snapshot.val();
+    const list = document.getElementById('teamsList');
+    const newCard = document.createElement('div');
+    newCard.className = 'legend-card';
+    newCard.innerHTML = `
+        <div class="legend-info">
+            <span class="legend-name">${data.name}</span>
+            <span class="team-members">الأعضاء: ${data.members}</span>
+        </div>
+        <div class="legend-trophies">🥇</div>
+    `;
+    list.appendChild(newCard);
+});
+        
 
         database.ref('remontada').on('child_added', function(snapshot) {
             const data = snapshot.val();
