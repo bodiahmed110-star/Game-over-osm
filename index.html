@@ -38,8 +38,396 @@
 
         .site-developer {
             font-size: 0.8rem;
-            color: #800
-        <div class="main-content">
+            color: #800000;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        .stats-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background-color: #121520;
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            border-radius: 20px;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5), 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #a0aec0;
+            font-weight: 600;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ffea00;
+            text-shadow: 0 0 10px rgba(255, 234, 0, 0.3);
+        }
+
+        .giant-space {
+            padding: 80px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .vip-intro-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #00d2ff;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.6);
+            max-width: 90%;
+            line-height: 1.6;
+        }
+
+        .down-arrow {
+            font-size: 2rem;
+            color: #ffea00;
+            animation: bounceArrow 1.2s infinite alternate;
+        }
+
+        .giant-space-2 {
+            padding: 80px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .hunters-text {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffe53b, #ff2525);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 229, 59, 0.4);
+            animation: textPulse 2s infinite alternate;
+        }
+
+        .gold-arrow {
+            font-size: 2.2rem;
+            background: linear-gradient(180deg, #ffea00, #ff9900);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 12px rgba(255, 234, 0, 0.7));
+            animation: bounceArrow 1s infinite alternate;
+        }
+
+        .giant-space-3 {
+            padding: 80px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .teams-header-text {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #00ffcc;
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+        }
+
+        .cyan-arrow {
+            font-size: 2rem;
+            color: #00ffcc;
+            filter: drop-shadow(0 0 8px rgba(0, 255, 204, 0.6));
+            animation: bounceArrow 1.1s infinite alternate;
+        }
+
+        .giant-space-4 {
+            padding: 80px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .remontada-header-text {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #d300ff;
+            text-shadow: 0 0 15px rgba(211, 0, 255, 0.8);
+        }
+
+        .purple-arrow {
+            font-size: 2rem;
+            color: #d300ff;
+            filter: drop-shadow(0 0 10px rgba(211, 0, 255, 0.8));
+            animation: bounceArrow 0.9s infinite alternate;
+        }
+
+        .vip-header {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-align: right;
+            margin-bottom: 15px;
+            padding-right: 5px;
+        }
+
+        .leaderboard-container {
+            background-color: #0b0f19;
+            padding: 15px;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 210, 255, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .vip-card {
+            background-color: #121520;
+            border-radius: 18px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .vip-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .vip-rank {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #8fa0dd;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .vip-avatar {
+            width: 45px;
+            height: 45px;
+            background: #1f2334;
+            border: 2px solid #0066ff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #00d2ff;
+            margin-left: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .vip-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .rank-1 .vip-rank { color: #ffea00; }
+        .rank-1 .vip-avatar { border-color: #ffea00; color: #ffea00; }
+
+        .legends-section {
+            text-align: right;
+            margin-bottom: 40px;
+        }
+
+        .legends-header {
+            font-size: 1.8rem;
+            color: #00d2ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #0066ff;
+            padding-right: 5px;
+        }
+
+        .teams-section {
+            text-align: right;
+            margin-bottom: 40px;
+        }
+
+        .teams-main-header {
+            font-size: 1.8rem;
+            color: #00ffcc;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #00ffcc;
+            padding-right: 5px;
+        }
+
+        .remontada-section {
+            text-align: right;
+            margin-bottom: 40px;
+        }
+
+        .remontada-main-header {
+            font-size: 1.8rem;
+            color: #d300ff;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px #d300ff;
+            padding-right: 5px;
+        }
+
+        .scroll-box {
+            background-color: #080b14;
+            border-radius: 30px;
+            height: 400px;
+            padding: 20px;
+            border: 1px solid rgba(0, 210, 255, 0.1);
+            overflow-y: auto;
+        }
+
+        .legends-section .scroll-box {
+            height: 500px;
+        }
+
+        .legend-card {
+            background: linear-gradient(90deg, #11141d, #161a26);
+            border-radius: 20px;
+            padding: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .legend-card:last-child {
+            margin-bottom: 0;
+        }
+
+        .legend-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .legend-name {
+            font-size: 1.15rem;
+            font-weight: bold;
+        }
+
+        .legend-title {
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 10px;
+            width: fit-content;
+            font-weight: 700;
+        }
+
+        .team-members {
+            font-size: 0.85rem;
+            color: #a0aec0;
+            font-weight: 500;
+        }
+
+        .title-5 { color: #ffea00; background: rgba(255, 234, 0, 0.1); border: 1px solid rgba(255, 234, 0, 0.3); }
+        .title-4 { color: #00d2ff; background: rgba(0, 210, 255, 0.1); border: 1px solid rgba(0, 210, 255, 0.3); }
+        .title-3 { color: #ff00ff; background: rgba(255, 0, 255, 0.1); border: 1px solid rgba(255, 0, 255, 0.3); }
+        .title-2 { color: #00ffcc; background: rgba(0, 255, 204, 0.1); border: 1px solid rgba(0, 255, 204, 0.3); }
+        .title-1 { color: #b3b3b3; background: rgba(179, 179, 179, 0.1); border: 1px solid rgba(179, 179, 179, 0.3); }
+        
+        .team-remontada { color: #d300ff; background: rgba(211, 0, 255, 0.1); border: 1px solid rgba(211, 0, 255, 0.3); }
+
+        .legend-trophies {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1.2rem;
+        }
+
+        .trophy-text {
+            color: #ffea00;
+            font-weight: 900;
+        }
+
+        .whatsapp-btn-container {
+            margin: 40px 0 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .whatsapp-join-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 800;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+            transition: 0.3s;
+        }
+
+        .whatsapp-join-btn:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .developer-box {
+            background-color: #0b0f19;
+            border: 1px solid rgba(0, 210, 255, 0.3);
+            border-radius: 20px;
+            padding: 15px;
+            margin: 25px auto;
+            max-width: 320px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .dev-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: linear-gradient(135deg, #00d2ff, #0066ff);
+            color: white;
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 102, 255, 0.2);
+        }
+
+        .site-footer {
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px 10px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #4a5568;
+        }
+
+        @keyframes moveLeftRight {
+            0% { transform: translateX(-10px); }
+            100% { transform: translateX(10px); }
+        }
+
+        @keyframes bounceArrow {
+            0% { transform: translateY(-5px); }
+            100% { transform: translateY(5px); }
+        }
+
+        @keyframes textPulse {
+            0% { transform: scale(0.98); }
+            100% { transform: scale(1.02); }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
         <h1 class="site-title">GAME OVER OSM</h1>
         <p class="site-developer">BY: 3BDO A7MED</p>
 
@@ -136,9 +524,9 @@
         <div class="teams-section">
             <h2 class="teams-main-header">⚔️ سجل أبطال التيمات</h2>
             <div class="scroll-box" id="teamsList">
-                <div class="legend-card"><div class="legend-info"><span class="legend-name">الكتيبة الذهبية</span><span class="legend-title team-members">محمد عصام، محمد سعيد، محمد مدريدي، منير عطا الله</span></div><div class="legend-trophies">🥇</div></div>
-                <div class="legend-card"><div class="legend-info"><span class="legend-name">تيم نيران التانجو</span><span class="legend-title team-members">ايمن الريان، محمد محمود، ايمن ماستر</span></div><div class="legend-trophies">🥇</div></div>
-                <div class="legend-card"><div class="legend-info"><span class="legend-name">تيم فرسان اوروبا</span><span class="legend-title team-members">Hassan Sayed، زياد٤٤، ايمن الريان</span></div><div class="legend-trophies">🥇</div></div>
+                <div class="legend-card"><div class="legend-info"><span class="legend-name">الكتيبة الذهبية</span><span class="legend-title team-members">الأعضاء: محمد عصام، محمد سعيد، محمد مدريدي، منير عطا الله</span></div><div class="legend-trophies">🥇</div></div>
+                <div class="legend-card"><div class="legend-info"><span class="legend-name">تيم نيران التانجو</span><span class="legend-title team-members">الأعضاء: ايمن الريان، محمد محمود، ايمن ماستر</span></div><div class="legend-trophies">🥇</div></div>
+                <div class="legend-card"><div class="legend-info"><span class="legend-name">تيم فرسان اوروبا</span><span class="legend-title team-members">الأعضاء: Hassan Sayed، زياد٤٤، ايمن الريان</span></div><div class="legend-trophies">🥇</div></div>
             </div>
         </div>
 
@@ -167,68 +555,6 @@
 
         <footer class="site-footer">جميع الحقوق محفوظة لموقع GAME OVER OSM 2026/2027 ©</footer>
     </div>
-
-    <script>
-        const firebaseConfig = { databaseURL: "https://game-over-osm-default-rtdb.firebaseio.com/" };
-        firebase.initializeApp(firebaseConfig);
-        const database = firebase.database();
-
-        function getTitleAndClass(trophies) {
-            if (trophies >= 5) return { text: "الإمبراطور الأسطوري للمنصة", class: "title-5" };
-            if (trophies == 4) return { text: "مهندس التكتيك الذهبي العالمي", class: "title-4" };
-            if (trophies == 3) return { text: "جنرال الساحة وصائد القمم", class: "title-3" };
-            if (trophies == 2) return { text: "الفارس النبيل ملك الخطط", class: "title-2" };
-            return { text: "البطل المتألق النزيه", class: "title-1" };
-        }
-
-        database.ref('legends').on('child_added', function(snapshot) {
-            const data = snapshot.val();
-            const list = document.getElementById('legendsList');
-            const badge = getTitleAndClass(data.trophies);
-            const newCard = document.createElement('div');
-            newCard.className = 'legend-card';
-            newCard.innerHTML = `
-                <div class="legend-info">
-                    <span class="legend-name">${data.name}</span>
-                    <span class="legend-title ${badge.class}">${badge.text}</span>
-                </div>
-                <div class="legend-trophies">
-                    <span class="trophy-text">x${data.trophies}</span>🏆
-                </div>
-            `;
-            list.insertBefore(newCard, list.firstChild);
-        });
-
-        database.ref('teams').on('child_added', function(snapshot) {
-            const data = snapshot.val();
-            const list = document.getElementById('teamsList');
-            const newCard = document.createElement('div');
-            newCard.className = 'legend-card';
-            newCard.innerHTML = `
-                <div class="legend-info">
-                    <span class="legend-name">${data.name}</span>
-                    <span class="team-members">الأعضاء: ${data.members}</span>
-                </div>
-                <div class="legend-trophies">🥇</div>
-            `;
-            list.insertBefore(newCard, list.firstChild);
-        });
-
-        database.ref('remontada').on('child_added', function(snapshot) {
-            const data = snapshot.val();
-            const list = document.getElementById('remontadaList');
-            const newCard = document.createElement('div');
-            newCard.className = 'legend-card';
-            newCard.innerHTML = `
-                <div class="legend-info">
-                    <span class="legend-name">${data.name}</span>
-                    <span class="legend-title team-remontada">ملك العودة التاريخية</span>
-                </div>
-                <div class="legend-trophies">🔄</div>
-            `;
-            list.insertBefore(newCard, list.firstChild);
-        });
-    </script>
 </body>
-</html>
-    
+    </html>
+                                             
